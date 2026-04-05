@@ -1,0 +1,27 @@
+{
+  "name": "cli-project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "get-chat-id": "node get-chat-id.js",
+    "test-bot": "node index.js test-bot",
+    "test-morning": "node index.js test-morning",
+    "test-afternoon": "node index.js test-afternoon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@notionhq/client": "^2.2.15",
+    "axios": "^1.14.0",
+    "dotenv": "^17.4.0",
+    "node-cron": "^4.2.1",
+    "node-telegram-bot-api": "^0.67.0",
+    "xlsx": "^0.18.5",
+    "yahoo-finance2": "^3.14.0"
+  }
+}
