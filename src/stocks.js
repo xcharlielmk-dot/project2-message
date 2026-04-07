@@ -67,7 +67,10 @@ async function getStockMarketUpdate() {
         // Handle names that might be missing
         const name = q.shortName || symbol;
         const dateStr = formatDate(q.regularMarketTime);
-        report += `- ${symbol} (${name}): ${formatChange(q.regularMarketChangePercent)}${dateStr}\n`;
+        const percentStr = formatChange(q.regularMarketChangePercent);
+        const absStr = q.regularMarketChange != null ? (q.regularMarketChange > 0 ? '+' : '') + q.regularMarketChange.toFixed(2) : 'N/A';
+        const priceStr = q.regularMarketPrice != null ? q.regularMarketPrice.toFixed(2) : 'N/A';
+        report += `- ${symbol} (${name}): ${percentStr}, ${absStr}, ${priceStr}${dateStr}\n`;
       } else {
         report += `- ${symbol}: Failed to fetch\n`;
       }
