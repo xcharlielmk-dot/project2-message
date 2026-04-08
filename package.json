@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "weather": "node index.js weather",
+    "stocks": "node index.js stocks",
+    "notion": "node index.js notion",
     "get-chat-id": "node get-chat-id.js",
-    "test-bot": "node index.js test-bot",
-    "test-morning": "node index.js test-morning",
-    "test-afternoon": "node index.js test-afternoon"
+    "test-bot": "node index.js test-bot"
   },
   "keywords": [],
   "author": "",

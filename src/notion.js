@@ -93,9 +93,9 @@ async function gatherNotes(notion, parentBlockId) {
  */
 async function getNotionNotesRevision() {
   const secret = process.env.NOTION_API_SECRET;
-  const pageId = process.env.NOTION_DATABASE_ID; // The user provided a Page ID
+  const pageId = process.env.NOTION_DATABASE_ID || '338f70d1edfb80259120ee826a2108d0';
 
-  if (!secret || secret === 'your_notion_api_secret_here' || !pageId || pageId === 'your_notion_database_id_here') {
+  if (!secret || secret === 'your_notion_api_secret_here' || !pageId) {
     return '<b>📓 Notion Notes Revision</b>\n\nNotion API Secret or ID is missing in .env.';
   }
 
