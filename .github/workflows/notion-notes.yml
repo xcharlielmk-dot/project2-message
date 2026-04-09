@@ -2,8 +2,8 @@ name: Notion Notes Revision
 
 on:
   schedule:
-    # 3:00 PM HKT -> 07:00 UTC
-    - cron: '0 7 * * *'
+    # 8:00 AM & 3:00 PM HKT -> 00:00 & 07:00 UTC
+    - cron: '0 0,7 * * *'
   workflow_dispatch:
 
 jobs:
