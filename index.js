@@ -8,21 +8,21 @@ async function sendWeatherReport() {
   console.log('Fetching weather report...');
   const weather = await getHKWeatherReport();
   const fullReport = `<b>Good Morning, Charlie!</b> ☕\n\n${weather}`;
-  await sendTelegramMessage(fullReport);
+  await sendTelegramMessage(fullReport, 'weather');
 }
 
 async function sendStockUpdate() {
   console.log('Fetching stock update...');
   const stocks = await getStockMarketUpdate();
   const fullReport = `<b>Stock Market Update</b> 📈\n\n${stocks}`;
-  await sendTelegramMessage(fullReport);
+  await sendTelegramMessage(fullReport, 'stocks');
 }
 
 async function sendNotionNotes() {
   console.log('Fetching Notion notes...');
   const notes = await getNotionNotesRevision();
   const fullReport = `<b>Good Afternoon, Charlie!</b> 📚\n\nHere are some reminders for you:\n\n${notes}`;
-  await sendTelegramMessage(fullReport);
+  await sendTelegramMessage(fullReport, 'notion');
 }
 
 const arg = process.argv[2];
